@@ -1,1 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wardrobe World</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{margin:0;font-family:'Poppins',sans-serif;}
+
+#welcome{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffd6e8,#d0f4ff,#fff5ba);
+text-align:center;
+}
+
+#welcome h1{font-size:45px;color:#ff4da6;}
+
+#welcome button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:#ff85c1;
+color:white;
+cursor:pointer;
+}
+
+#main{display:none;height:100vh;}
+
+.container{display:flex;height:100%;}
+
+#collage{
+width:40%;
+background:#f7f7f7;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+#collage img{
+width:90%;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+#content{
+width:60%;
+padding:30px;
+overflow-y:auto;
+}
+
+#content h1{font-size:32px;}
+#content h3{font-weight:400;line-height:1.6;}
+
+.menu{
+position:fixed;
+right:0;
+top:0;
+width:230px;
+height:100%;
+background:white;
+overflow-y:auto;
+border-left:2px solid #eee;
+padding:10px;
+}
+
+.menu button{
+display:block;
+width:100%;
+margin:8px 0;
+padding:8px;
+border:none;
+background:#ffe6f2;
+cursor:pointer;
+font-style:italic;
+}
+
+.menu button:hover{background:#ffb3d9;}
+</style>
+</head>
+
+<body>
+
+<div id="welcome">
+<h1>✨ Welcome to Wardrobe World ✨</h1>
+<button onclick="enterSite()">Enter</button>
+</div>
+
+<div id="main">
+<div class="container">
+
+<div id="collage">
+<img id="fashionImage" src="https://images.unsplash.com/photo-1520975922284-8b456906c813">
+</div>
+
+<div id="content">
+<h1>Select a Fashion Style</h1>
+<h3>Click a fashion type from the right menu.</h3>
+</div>
+
+</div>
+
+<div class="menu">
+<button onclick="showFashion('Minimalist Fashion', minimalist,'https://images.unsplash.com/photo-1520975922284-8b456906c813')">Minimalist</button>
+<button onclick="showFashion('Bohemian (Boho) Fashion', boho,'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c')">Boho</button>
+<button onclick="showFashion('Streetwear', streetwear,'https://images.unsplash.com/photo-1520974735194-9b1f4d9e5b2b')">Streetwear</button>
+<button onclick="showFashion('Vintage Fashion', vintage,'https://images.unsplash.com/photo-1495121605193-b116b5b09a1b')">Vintage</button>
+<button onclick="showFashion('Preppy Fashion', preppy,'https://images.unsplash.com/photo-1521572267360-ee0c2909d518')">Preppy</button>
+<button onclick="showFashion('Goth Fashion', goth,'https://images.unsplash.com/photo-1519741497674-611481863552')">Goth</button>
+<button onclick="showFashion('Punk Fashion', punk,'https://images.unsplash.com/photo-1509631179647-0177331693ae')">Punk</button>
+<button onclick="showFashion('Grunge Fashion', grunge,'https://images.unsplash.com/photo-1517841905240-472988babdf9')">Grunge</button>
+<button onclick="showFashion('Athleisure Fashion', athleisure,'https://images.unsplash.com/photo-1517832606299-7ae9b720a186')">Athleisure</button>
+<button onclick="showFashion('Chic Fashion', chic,'https://images.unsplash.com/photo-1490481651871-ab68de25d43d')">Chic</button>
+</div>
+</div>
+
+<script>
+
+function enterSite(){
+document.getElementById("welcome").style.display="none";
+document.getElementById("main").style.display="block";
+}
+
+function showFashion(title,text,image){
+document.getElementById("content").innerHTML="<h1>"+title+"</h1><h3>"+text+"</h3>";
+document.getElementById("fashionImage").src=image;
+}
+
+var minimalist = `History<br>  
+Minimalist fashion began as a reaction against overly decorative clothing in the early 20th century. It gained recognition in the 1960s when modern art and architecture promoted simplicity. Designers like Calvin Klein helped popularize clean and structured designs. In the 1990s, minimalism became a global trend through runway shows in New York City and other fashion capitals. The movement focused on neutral colors and sharp tailoring. It reflected changing lifestyles that valued practicality. Economic shifts also encouraged people to buy fewer but better-quality clothes. Minimalism aligned with professional working culture. It later connected with sustainable fashion ideas. Today, it remains a timeless style across the world.<br><br>  
+Summary<br>  
+Minimalist fashion is based on the idea that “less is more.” It uses simple cuts, neutral shades like black, white, beige, and grey. Clothes usually have little to no prints or heavy decoration. The focus is on high-quality fabric and perfect fitting. Wardrobes often include basic items that can be mixed easily. It creates a clean and elegant appearance. Accessories are kept minimal and subtle. This style is suitable for both casual and formal settings. It promotes confidence through simplicity. Overall, minimalist fashion is modern, classy, and practical.`;  
+  
+var boho = `History<br>  
+Bohemian fashion originated in 19th century Europe among artists and free thinkers. The term “Bohemian” referred to unconventional lifestyles. It became more popular during the 1960s hippie movement in United States. Music festivals like Woodstock influenced the trend greatly. Natural fabrics and handmade details became fashionable. The 1970s strengthened its presence in mainstream fashion. In the early 2000s, celebrities revived boho style. Fashion brands adapted it into modern collections. It symbolized freedom and creativity. Today, it continues to inspire seasonal trends.<br><br>  
+Summary<br>  
+Boho fashion is relaxed, artistic, and free-spirited. It includes flowy maxi dresses and loose tops. Earthy tones like brown, mustard, and olive are common. Floral and tribal prints are widely used. Accessories include layered necklaces and bangles. Fringe bags and wide-brim hats complete the look. Fabrics are mostly cotton and linen. It gives a comfortable and natural appearance. The style reflects individuality and creativity. Overall, boho fashion expresses freedom and self-expression.`;  
+  
+var streetwear = `History<br>  
+Streetwear started in the 1980s in urban communities of Los Angeles and New York City. It was influenced by skateboarding and hip-hop culture. Music artists played a major role in spreading the style. Brands like Supreme created hype through limited releases. Sneakers became important fashion statements. In the 2000s, luxury brands collaborated with streetwear labels. Social media helped expand its popularity globally. Youth culture strongly shaped its growth. Fashion shows began including streetwear collections. Today, it is a major part of global fashion.<br><br>  
+Summary<br>  
+Streetwear is bold, casual, and youth-driven. It includes oversized hoodies and graphic t-shirts. Sneakers are the most important element. Logos and branding are highly visible. Clothing often has bright colors and strong prints. Comfort is a key feature of this style. Limited edition pieces create exclusivity. It mixes sportswear with fashion trends. Streetwear represents confidence and individuality. Overall, it blends culture, music, and fashion together.`;  
+  
+var vintage = `History<br>  
+Vintage fashion refers to clothing styles from previous decades. It became popular after World War II when people reused old garments. The 1950s and 1960s fashion trends inspired many revivals. Fashion historians began preserving classic designs. Thrift stores made vintage items accessible. Designers often recreated 1920s and 1970s silhouettes. Films set in earlier decades increased interest. Sustainable fashion movements supported vintage clothing. It gained popularity among youth in the 1990s. Today, vintage fashion remains a strong trend worldwide.<br><br>  
+Summary<br>  
+Vintage fashion includes clothes inspired by past eras. Each decade has its own signature look. Retro dresses and high-waisted pants are common. It focuses on classic tailoring and details. Many people shop from thrift stores. The style supports recycling and sustainability. Accessories often match the era’s design. Vintage outfits create a nostalgic feeling. It values uniqueness and history. Overall, vintage fashion celebrates timeless beauty.`;  
+  
+var preppy = `History<br>  
+Preppy fashion began in American Ivy League schools in the 1950s. It reflected upper-class student dressing styles. Polo shirts and blazers became popular. Brands like Ralph Lauren shaped its identity. The style became mainstream in the 1980s. It symbolized sophistication and discipline. Magazines promoted it as elite fashion. It combined sportswear with formal elements. Over time, it adapted to modern trends. Today, preppy style remains classic and polished.<br><br>  
+Summary<br>  
+Preppy fashion is neat and structured. It includes button-down shirts and pleated skirts. Soft pastel and neutral colors are common. Sweaters are often tied over shoulders. Loafers and clean sneakers complete the look. The style is simple but elegant. It gives a smart and organized appearance. It suits school and semi-formal events. It represents confidence and class. Overall, preppy fashion is timeless and refined`;  
+  
+var goth = `History<br>  
+Goth fashion emerged in the late 1970s and early 1980s in the United Kingdom. It developed from the gothic rock music scene. Bands like The Cure influenced the style strongly. The movement grew in cities like London. It was inspired by Victorian mourning clothing and dark romantic themes. Black clothing became the signature look. Over time, it blended with punk influences. The 1990s saw goth fashion spreading globally. Substyles like romantic goth and cyber goth appeared. Today, it remains a unique alternative fashion culture.<br><br>  
+Summary<br>  
+Goth fashion is dark, dramatic, and expressive. Black is the dominant color in outfits. Lace, leather, and velvet fabrics are common. Clothing often includes long coats and corsets. Heavy boots are a key part of the look. Makeup usually features dark eyeliner and lipstick. Accessories include silver jewelry and chokers. The style expresses individuality and mystery. It is often linked with music and art. Overall, goth fashion represents bold self-expression.`;  
+  
+var punk = `History<br>  
+Punk fashion began in the mid-1970s in the United Kingdom. It was connected to punk rock music. Bands like Sex Pistols influenced the rebellious look. Designer Vivienne Westwood helped bring punk style into mainstream fashion. It started as a protest against social norms. Ripped clothes and safety pins became symbols of rebellion. The style spread to the United States quickly. It represented youth dissatisfaction. Over time, high fashion adopted punk elements. Today, it still symbolizes anti-establishment attitudes.<br><br>  
+Summary<br>  
+Punk fashion is bold and rebellious. It includes ripped jeans and leather jackets. Safety pins and studs are common decorations. Bold hairstyles like colored spikes are popular. Plaid patterns are often used. Heavy boots complete the outfit. The style challenges traditional fashion rules. It represents freedom and resistance. Accessories are dramatic and eye-catching. Overall, punk fashion expresses strong individuality.`;  
+  
+var grunge = `History<br>  
+Grunge fashion started in the late 1980s in Seattle. It was linked to grunge music bands. Groups like Nirvana made the look popular. The style reflected an anti-fashion attitude. Thrift store clothing became trendy. Loose and layered outfits defined the movement. In the 1990s, fashion designers adopted grunge elements. It symbolized a relaxed and careless vibe. The trend faded but returned in the 2010s. Today, grunge remains a youth-inspired aesthetic.<br><br>  
+Summary<br>  
+Grunge fashion is casual and unpolished. It includes flannel shirts and ripped jeans. Oversized sweaters are common. Dark and muted colors dominate the style. Combat boots are often worn. Layers create a messy appearance. The style values comfort over glamour. It reflects individuality and simplicity. Accessories are minimal and subtle. Overall, grunge fashion gives a relaxed and edgy look.`;  
+  
+var athleisure = `History<br>  
+Athleisure became popular in the early 2000s. It developed from sportswear becoming everyday wear. Brands like Nike influenced the trend. Yoga culture and fitness movements increased its growth. Celebrities promoted wearing gym clothes casually. Comfortable fabrics became fashionable. It blurred the line between athletic and casual clothing. Social media boosted its popularity worldwide. Luxury brands also created sporty collections. Today, athleisure is a major part of modern fashion.<br><br>  
+Summary<br>  
+Athleisure fashion combines comfort and style. It includes leggings and joggers. Sports bras and hoodies are common pieces. Sneakers are essential in this look. Stretchy fabrics allow easy movement. Neutral and pastel colors are popular. The style is suitable for both workouts and outings. It focuses on practicality and flexibility. Minimal accessories are preferred. Overall, athleisure fashion is modern and comfortable.`;  
+  
+var chic = `History<br>  
+Chic fashion originated in Paris during the early 20th century. It is associated with elegance and simplicity. Designers like Coco Chanel shaped chic style. It promoted comfortable yet stylish clothing for women. The “little black dress” became iconic. Parisian culture influenced global fashion trends. Chic fashion spread through magazines and films. It emphasized refined beauty. Over decades, it adapted to modern tastes. Today, chic fashion symbolizes effortless elegance.<br><br>  
+Summary<br>  
+Chic fashion is elegant and polished. It focuses on simple but stylish outfits. Neutral colors like black and beige are common. Clothes are well-fitted and tailored. Accessories are minimal but classy. High-quality fabrics are preferred. The style avoids loud prints. It creates a sophisticated appearance. Chic outfits are suitable for formal occasions. Overall, chic fashion represents timeless elegance.`;  
+</script>
+
+</body>
+</html>
