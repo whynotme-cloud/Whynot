@@ -1,0 +1,90 @@
+.navbar{
+    background-color:#9E3B3B;
+    width:100%;
+    height:80px;
+    display:flex;
+    justify-content:center;
+    justify-items: center;
+}
+
+h1{
+   color:#FFEAD3;
+
+}
+
+
+body{ 
+    background-color:#FFEAD3;
+}
+
+h2{
+    color:#9E3B3B;
+    padding-left:500px;
+    font-size:50px;
+    padding-top:100px;
+}
+
+.button{
+    background-color: #FFEAD3;
+    border:none;
+    color: #9E3B3B;
+    font-size:50px;
+    padding-left:600px;
+}
+
+/* page*/
+ 
+
+
+.hidden{
+      display:none;
+      justify-content: center;
+      justify-items:center;
+}
+
+
+.box{
+    width:180px;
+    height:180px;
+    background-color:white;
+    border-radius:50%;
+    margin:50px;
+}
+
+.box:hover{
+    opacity:50%;
+}
+
+#one{
+    background-image:url("Rock.webp");
+    background-size: cover;
+    mix-blend-mode:darken;
+}
+
+#two{
+    background-image:url("paper.avif");
+    background-size:cover;
+    mix-blend-mode:multiply;
+}
+
+#three{
+    background-image: url("scisscors.png");
+    background-size: cover;
+    mix-blend-mode:darken;
+}
+
+.scoreboard{
+  display:none;
+  justify-content: center;
+}
+
+.score{
+  margin-right:70px;
+  margin-left:70px;
+  font-size:25px;
+}
+
+#msg{
+    display:none;
+    justify-content: center;
+}
