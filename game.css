@@ -57,6 +57,7 @@ h2{
 
 #one{
     background-image:url("Rock.webp");
+    front-size:25px;
     background-size: cover;
     mix-blend-mode:darken;
 }
